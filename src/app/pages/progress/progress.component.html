@@ -1,3 +1,38 @@
-<p>
-  progessd works!
-</p>
+
+  <div class="row">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-body">
+                  
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+        <div class="card">
+          <div class="card-body">
+              <div class="progress">
+                  <div class="progress-bar progress-bar-striped active" role="progressbar" [attr.ariaValuenow]="progreso1" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso1 + '%'"  style="width: 50%">
+                    <span class="sr-only">45% Complete</span>
+                  </div>    
+              </div>
+              <div class="progress">
+                  <div class="progress-bar progress-bar-striped active" role="progressbar" [attr.ariaValuenow]="progreso2" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" [style.width]="progreso2 + '%'"  style="width: 50%">
+                    <span class="sr-only">45% Complete</span>
+                  </div>    
+              </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  
+  <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+        <app-incrementador (actualizaValor)="progreso1 = $event" nombre="progress azul" [progreso]="progreso1"></app-incrementador>      
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+          <app-incrementador  (actualizaValor)="progreso2 = $event" nombre="progress verde" [progreso]="progreso2"></app-incrementador>
+      </div>
+      
+  </div>

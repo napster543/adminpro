@@ -1,3 +1,46 @@
-<p>
-  graficas1 works!
-</p>
+<div class="x_content">
+
+  <div class="row">
+
+    <div class="col-md-6 col-sm-6 col-xs-6 form-group">
+        {{graficos.graficos1.leyenda}}
+        <app-grafico-dona 
+          [chartLabels] = "graficos.graficos1.labels"
+          [chartData] = "graficos.graficos1.data"
+          [chartType] = "graficos.graficos1.type"
+           ></app-grafico-dona>      
+
+    </div>
+
+    <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+        {{graficos.graficos2.leyenda}}
+        <app-grafico-dona 
+        [chartLabels] = "graficos.graficos2.labels"
+        [chartData] = "graficos.graficos2.data"
+        [chartType] = "graficos.graficos2.type"
+         ></app-grafico-dona>    
+    </div>
+    
+  </div>
+  <div class="row">
+      
+      <div class="col-md-6 col-sm-6 col-xs-6 form-group">
+          {{graficos.graficos3.labels}}
+          <app-grafico-dona 
+          [chartLabels] = "graficos.graficos3.labels"
+          [chartData] = "graficos.graficos3.data"
+          [chartType] = "graficos.graficos3.type"
+           ></app-grafico-dona>    
+      </div>
+  
+      <div class="col-md-6 col-sm-12 col-xs-12 form-group">
+          {{graficos.graficos4.leyenda}}         
+          <app-grafico-dona 
+          [chartLabels] = "graficos.graficos4.labels"
+          [chartData] = "graficos.graficos4.data"
+          [chartType] = "graficos.graficos4.type"
+           ></app-grafico-dona>    
+      </div>
+      
+    </div>
+</div>
